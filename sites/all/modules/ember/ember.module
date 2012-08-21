@@ -27,7 +27,20 @@ function ember_menu() {
  */
 function ember_page() {
 
-	return 'Hello Ember';
+	// Init
+	$module_path = drupal_get_path('module', 'ember');
+	$js_path = '';
+
+	// Add appropriate js to the page
+	$js_path = $module_path . '/js/handlebars-1.0.0.beta.6.js';
+	drupal_add_js($js_path, array('scope' => 'footer'));
+	$js_path = $module_path . '/js/ember-1.0.pre.min.js';
+	drupal_add_js($js_path, array('scope' => 'footer'));
+	$js_path = $module_path . '/js/app.js';
+	drupal_add_js($js_path, array('scope' => 'footer'));
+
+	// Return
+	return '';
 
 }
 
@@ -40,7 +53,7 @@ function ember_js_alter(&$javascript) {
 	$jquery_path = drupal_get_path('module', 'ember') . '/js/jquery-1.7.2.min.js';
 
 	// Update on jQuery on results page and the sample creation page
-	if ( arg(1) === 'ember' ) {
+	if ( arg(0) === 'ember' ) {
 		$javascript['misc/jquery.js']['data'] = $jquery_path;	
 	}
 	
