@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * The Ember Application Framework for the Patrick Marold site.
+ */
+
+/**
+ * Implements hook_menu
+ */
+function ember_menu() {
+
+	$items = array();
+
+	$items['ember'] = array(
+		'title' => 'Ember Application Framework',
+		'description' => 'A test and staging area for the Patrick Marold site',
+		'access arguments' => array('access content'),
+		'page callback' => 'ember_page',
+	);
+
+	return $items;
+
+}
+
+/**
+ * Page callbck: Ember Page
+ */
+function ember_page() {
+
+	return 'Hello Ember';
+
+}
+
+/**
+ * Implements hook_js_alter
+ */
+function ember_js_alter(&$javascript) {
+
+	// Define path to jQuery
+	$jquery_path = drupal_get_path('module', 'ember') . '/js/jquery-1.7.2.min.js';
+
+	// Update on jQuery on results page and the sample creation page
+	if ( arg(1) === 'ember' ) {
+		$javascript['misc/jquery.js']['data'] = $jquery_path;	
+	}
+	
+}

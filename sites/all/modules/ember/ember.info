@@ -1,0 +1,4 @@
+name = Ember
+description = The Ember Application framework for Patrick Marold's site
+package = Cirro
+core = 7.x
