@@ -1,0 +1,60 @@
+<?php
+
+/**
+ * The Ember Application Framework for the Patrick Marold site.
+ */
+
+/**
+ * Implements hook_menu
+ */
+function ember_menu() {
+
+	$items = array();
+
+	$items['ember'] = array(
+		'title' => 'Ember Application Framework',
+		'description' => 'A test and staging area for the Patrick Marold site',
+		'access arguments' => array('access content'),
+		'page callback' => 'ember_page',
+	);
+
+	return $items;
+
+}
+
+/**
+ * Page callbck: Ember Page
+ */
+function ember_page() {
+
+	// Init
+	$module_path = drupal_get_path('module', 'ember');
+	$js_path = '';
+
+	// Add appropriate js to the page
+	$js_path = $module_path . '/js/handlebars-1.0.0.beta.6.js';
+	drupal_add_js($js_path, array('scope' => 'footer'));
+	$js_path = $module_path . '/js/ember-1.0.pre.min.js';
+	drupal_add_js($js_path, array('scope' => 'footer'));
+	$js_path = $module_path . '/js/app.js';
+	drupal_add_js($js_path, array('scope' => 'footer'));
+
+	// Return
+	return '';
+
+}
+
+/**
+ * Implements hook_js_alter
+ */
+function ember_js_alter(&$javascript) {
+
+	// Define path to jQuery
+	$jquery_path = drupal_get_path('module', 'ember') . '/js/jquery-1.7.2.min.js';
+
+	// Update on jQuery on results page and the sample creation page
+	if ( arg(0) === 'ember' ) {
+		$javascript['misc/jquery.js']['data'] = $jquery_path;	
+	}
+	
+}
