@@ -1,42 +1,42 @@
-<div id="splash"></div>
-
-<div class="navbar">
-	<div class="navbar-inner">
-		<div class="container">
-			<div class="row">
-				<div class="span5">
-			    <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-			      <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>"/>
-			    </a>
-		    </div>
-		    <div id="nav-region">
-					<ul id="iso-filters">
-						<li><a href="#" class="selected" data-filter="*">all</a></li>
-						<li><a href="#paintings" data-filter=".painting">paintings</a></li>
-						<li><a href="#drawings" data-filter=".drawing">drawings</a></li>
-						<li><a>/</a></li>
-					</ul>
-					<?php print render($page['header']); ?>
-				</div>
-    	</div>
-  	</div>
+<div class="container-fluid center">
+	<section id="intro">
+		<div class="main-container text-center tk-proxima-nova"> 
+			<div class="name">
+				<h1>PATRICK MAROLD</h1>
+			</div> 
+			<div class="line"></div> 
+			<div class="welcome">"I create sculpture to invite the viewer to realize spatial relationships and a perspective that grows and changes. I approach architecture and the landscape with sensitivity to time, light, and activity. Informed by my relationships with the land and various environments, my installations rely as much on the surrounding environment as they do future change and personal familiarity."
+			</div> 
+			<div class="line">
+		</div> 
 	</div>
-</div>
+</section>
+	
+	<section class="work">
+		<div class="work-pics"></div>
+		<div class="work-title text-center">Work Title 2012</div>
+		<div class="work-body text-center">Veggies sunt bona vobis, proinde vos postulo esse magis rutabaga parsley earthnut pea soybean celtuce.<br>
+
+Pea green bean prairie turnip tatsoi broccoli rabe bunya nuts asparagus beet greens eggplant swiss chard jicama kale courgette ricebean parsnip silver beet onion corn. Burdock turnip radish bamboo shoot turnip greens bunya nuts corn kakadu plum parsley desert raisin endive bitterleaf celtuce. Squash salad spinach radicchio chard melon tigernut okra sea lettuce arugula welsh onion aubergine prairie turnip corn watercress.</div>
+	</section>
+	
+		<section class="work">
+		<div class="work-pics"></div>
+		<div class="work-title text-center">Work Title 2012</div>
+		<div class="work-body text-center">Veggies sunt bona vobis, proinde vos postulo esse magis rutabaga parsley earthnut pea soybean celtuce.<br>
+
+Pea green bean prairie turnip tatsoi broccoli rabe bunya nuts asparagus beet greens eggplant swiss chard jicama kale courgette ricebean parsnip silver beet onion corn. Burdock turnip radish bamboo shoot turnip greens bunya nuts corn kakadu plum parsley desert raisin endive bitterleaf celtuce. Squash salad spinach radicchio chard melon tigernut okra sea lettuce arugula welsh onion aubergine prairie turnip corn watercress.</div>
+	</section>
 	
 
-<div class="container" class="<?php print $classes; ?>"<?php print $attributes; ?>>
-  <div id="content">
-    <?php print $messages; ?>
-    <?php include('iso.inc'); ?>
+		
+	
+	<div class="container" class="<?php print $classes; ?>"<?php print $attributes; ?>>
+	  <div id="content">
+	    <?php print $messages; ?>
+	</div>
+	
+	<footer id="footer">
+	 
+	</footer> 
 </div>
-
-<footer id="footer">
-  <div id="social-wrap">
-  		<ul id="social">
-        <li><a href="#"><img src="/sites/all/themes/climBootstrap/images/social/twitter.png" /></a></li>
-        <li><a href="#"><img src="/sites/all/themes/climBootstrap/images/social/fb.png" /></a></li>
-        <li><a href="#"><img src="/sites/all/themes/climBootstrap/images/social/pinterest.png" /></a></li>
-        <li><a href="#"><img src="/sites/all/themes/climBootstrap/images/social/email.png" /></a></li>
-       </ul>
-  	</div>	
-</footer> 

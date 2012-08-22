@@ -20,12 +20,14 @@
 
 body
 	margin: 0
+	border-top: 5px solid $blue
+	border-bottom: 5px solid $blue
 	font-family: $baseFontFamily
 	font-size: $baseFontSize
 	line-height: $baseLineHeight
 	color: $textColor
-	background: $bodyBackground
-	//background-color: $bodyBackground
+	+background-image(linear-gradient(#fff, #bbb))
+	height: 10000px
 
 #splash
 	background: url(../images/splash.png) no-repeat center center $bodyBackground
@@ -65,6 +67,7 @@ a:hover
 	padding-left: $gridGutterWidth
 	padding-right: $gridGutterWidth
 	@include clearfix()
+	max-width: 1200px
 
 section
 	padding-top: 20px
@@ -272,6 +275,7 @@ h1, h2, h3, h4, h5, h6
 h1
 	font-size: 30px
 	line-height: $baseLineHeight * 2
+	margin-bottom: 30px
 	small
 		font-size: 18px
 
