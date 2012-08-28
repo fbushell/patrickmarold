@@ -26,15 +26,7 @@ body
 	font-size: $baseFontSize
 	line-height: $baseLineHeight
 	color: $textColor
-	+background-image(linear-gradient(#fff, #bbb))
-	height: 10000px
-
-#splash
-	background: url(../images/splash.png) no-repeat center center $bodyBackground
-	position: absolute
-	height: 100%
-	width: 100%
-	z-index: 1000
+	+background-image(linear-gradient(#fff, #ddd))
 
 // Images
 img
@@ -64,10 +56,9 @@ a:hover
 
 // Fluid layouts (left aligned, with sidebar, min- & max-width content)
 .container-fluid 
-	padding-left: $gridGutterWidth
-	padding-right: $gridGutterWidth
+	padding: 0 5%
 	@include clearfix()
-	max-width: 1200px
+	max-width: 900px
 
 section
 	padding-top: 20px
