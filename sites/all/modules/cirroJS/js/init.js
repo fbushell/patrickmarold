@@ -13,8 +13,6 @@
 	
 				$("#work2").smoothDivScroll({});	
 				$("#work3").smoothDivScroll({});
-			/*
-				
 				$("#work4").smoothDivScroll({});	
 				$("#work5").smoothDivScroll({});	
 				$("#work6").smoothDivScroll({});	
@@ -22,11 +20,11 @@
 				$("#work8").smoothDivScroll({});	
 				$("#work9").smoothDivScroll({});	
 				$("#work10").smoothDivScroll({});	
-				$("#wor11").smoothDivScroll({});	
+				$("#work11").smoothDivScroll({});	
 				$("#work12").smoothDivScroll({});	
 				$("#work13").smoothDivScroll({});	
 				$("#work14").smoothDivScroll({});	
-		*/
+
 
 
 			}); // end window load function

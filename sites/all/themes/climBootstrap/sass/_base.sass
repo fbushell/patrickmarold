@@ -20,13 +20,18 @@
 
 body
 	margin: 0
-	border-top: 5px solid $blue
-	border-bottom: 5px solid $blue
+	border-bottom: 5px solid $yellow
 	font-family: $baseFontFamily
+	font-style: normal
+	font-weight: 300
 	font-size: $baseFontSize
-	line-height: $baseLineHeight
+	line-height: 24px
 	color: $textColor
-	+background-image(linear-gradient(#fff, #ddd))
+	+background-image(linear-gradient(#fff, #bbb))
+	
+.page-user
+	background: $white
+	border-bottom: none
 
 // Images
 img
@@ -58,7 +63,7 @@ a:hover
 .container-fluid 
 	padding: 0 5%
 	@include clearfix()
-	max-width: 900px
+	max-width: 800px
 
 section
 	padding-top: 20px

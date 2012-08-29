@@ -23,7 +23,6 @@
 	$counter = 1;
 	
 	
-	
 	// Loop through works and create markup
 	foreach ( $works as $work ) {
 		
@@ -69,7 +68,6 @@
 						</div> 
 					</div>	
 				</div>
-
 				<div class=\"work-words container-fluid center\">
 					<div class=\"work-title text-center\"><h3>$work_title</h3></div>
 					<div class=\"date-location text-center\"><h6>$work_location $work_date</h6></div>

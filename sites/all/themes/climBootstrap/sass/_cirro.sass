@@ -1,11 +1,42 @@
 //  CIRRO CUSTOM SASS
 // ----------------------------------------------------------------------------
 
+#top-stripe
+	height: 5px
+	width: 100%
+	background-color: $yellow
+	position: fixed
+	top: 0 
+	left: 0
+	z-index: 300
+
 #intro
 	margin-top: 20%
 	margin-bottom: 35%
 	.welcome
 		padding: 30px 0
+	.name
+		font-size: 30px
+		font-weight: 700
+		letter-spacing: 5px
+		margin-bottom: 30px
+		
+#main-nav
+	position: fixed
+	top: 10px
+	right: 15px
+	z-index: 400
+	font-size: 13px
+	ul
+		li
+			display: inline
+			margin-left: 15px
+			a
+				color: #333
+				&:hover
+					text-decoration: none
+					color: $yellow
+			
 
 .work
 	margin-bottom: 300px		

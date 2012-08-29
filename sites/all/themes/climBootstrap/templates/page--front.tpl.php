@@ -1,12 +1,30 @@
+<?php 
 
-<section id="intro" class="container-fluid center">
+	$nid = 3;
+	$node = node_load($nid);
+
+	// Front page fields
+	$intro = $node->field_intro['und'][0]['value'];
+	$contact = $node->field_contact['und'][0]['value'];
+
+?>
+
+
+<div id="top-stripe"></div>
+
+<nav id="main-nav">
+	<ul>
+		<li><a href="#">About</a></li>
+		<li> / </li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+</nav>
+
+<section id="intro" class="container-fluid center scrollblock">
 	<div class="main-container text-center tk-proxima-nova"> 
-		<div class="name">
-			<h1>PATRICK MAROLD</h1>
-		</div> 
+		<div class="name">PATRICK MAROLD</div> 
 		<div class="line"></div> 
-		<div class="welcome">"I create sculpture to invite the viewer to realize spatial relationships and a perspective that grows and changes. I approach architecture and the landscape with sensitivity to time, light, and activity. Informed by my relationships with the land and various environments, my installations rely as much on the surrounding environment as they do future change and personal familiarity."
-		</div> 
+		<div class="welcome"><?php print $intro; ?></div> 
 		<div class="line">
 	</div> 
 </div>
@@ -19,6 +37,8 @@
     <?php print $messages; ?>
 </div>
 	
-<footer id="footer">
- 
+<footer id="footer text-center">
+	<div id="">
+		<?php print $contact; ?>
+	</div>
 </footer> 
