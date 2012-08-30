@@ -10,6 +10,7 @@
   Drupal.behaviors.init = {
     attach: function (context, settings) {  
 			$(document).ready(function(){	
+			
 	
 				$("#work2").smoothDivScroll({});	
 				$("#work3").smoothDivScroll({});

@@ -20,16 +20,16 @@
 
 body
 	margin: 0
-	border-bottom: 5px solid $yellow
+	border-bottom: 10px solid $red
 	font-family: $baseFontFamily
 	font-style: normal
 	font-weight: 300
 	font-size: $baseFontSize
 	line-height: 24px
 	color: $textColor
-	+background-image(linear-gradient(#fff, #bbb))
+	+background-image(linear-gradient(#fff, #d0cfcb))
 	
-.page-user
+body.page-user
 	background: $white
 	border-bottom: none
 
@@ -63,7 +63,8 @@ a:hover
 .container-fluid 
 	padding: 0 5%
 	@include clearfix()
-	max-width: 800px
+	max-width: 900px
+	margin: 0 auto
 
 section
 	padding-top: 20px
@@ -946,11 +947,8 @@ select:focus:required:invalid
 // ----------------------------------------------------------------------------
 
 .form-actions
-	padding: ($baseLineHeight - 1) 20px $baseLineHeight
 	margin-top: $baseLineHeight
 	margin-bottom: $baseLineHeight
-	background-color: $grayLighter
-	border-top: 1px solid #ddd
 	@include clearfix() // Adding clearfix to allow for .pull-right button containers
 
 // For text that needs to appear as an input but should not be an input

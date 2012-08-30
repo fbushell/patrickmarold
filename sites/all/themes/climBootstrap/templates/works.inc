@@ -40,6 +40,24 @@
 		$work_location = $work->field_work_location['und'][0]['value'];
 		$img_array = $work->field_work_image['und'];
 		
+		if ( isset($work->field_video_link['und'][0]['value']) ) {
+		
+			$video_link = $work->field_video_link['und'][0]['value'];
+			
+			$video = "<iframe src=\"http://player.vimeo.com/video/$video_link?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff\" 
+										width=\"1068\" 
+										height=\"600\" 
+										frameborder=\"0\" 
+										webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+									</iframe>";
+									
+		} else {
+			
+			$video = '';
+			
+		}
+		
+		
 		// Loop through all images to get paths
 		foreach ( $img_array as $key => $value ) {
 
@@ -57,28 +75,21 @@
 
 		$html = "
 			<section class=\"work\">
-				<div id=\"work$counter\">
-					<div id=\"slideshow\"> 
-						<div class=\"scrollingHotSpotLeft scrollingHotSpotLeftVisible\"></div> 
-						<div class=\"scrollingHotSpotRight scrollingHotSpotRightVisible\"></div> 
-						<div class=\"scrollable scrollWrapper\"> 
-							<div class=\"scrollableArea\"> 
+				<div id=\"work$counter\" class=\"work-img-wrap loading\">
+								$video
 								$imgs
-							</div>
-						</div> 
-					</div>	
 				</div>
 				<div class=\"work-words container-fluid center\">
-					<div class=\"work-title text-center\"><h3>$work_title</h3></div>
-					<div class=\"date-location text-center\"><h6>$work_location $work_date</h6></div>
-					<div class=\"work-body text-center\">$work_body</div>
+					<div class=\"work-title left\">$work_title&nbsp;&nbsp;/&nbsp;&nbsp;</div>
+					$work_body&nbsp;&nbsp;/&nbsp;&nbsp;$work_date&nbsp;&nbsp;/&nbsp;&nbsp;$work_location
 				</div>
 			</section>
 		";
 		
-		print $html;
+	print $html;	
 		
 	}
+	
 
 
 ?>

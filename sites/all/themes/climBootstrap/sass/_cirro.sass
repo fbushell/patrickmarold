@@ -2,19 +2,21 @@
 // ----------------------------------------------------------------------------
 
 #top-stripe
-	height: 5px
+	height: 10px
 	width: 100%
-	background-color: $yellow
+	background-color: $red
 	position: fixed
 	top: 0 
 	left: 0
 	z-index: 300
 
 #intro
-	margin-top: 20%
-	margin-bottom: 35%
+	margin-top: 13%
+	margin-bottom: 23%
 	.welcome
 		padding: 30px 0
+		font-size: 16px
+		line-height: 27px
 	.name
 		font-size: 30px
 		font-weight: 700
@@ -37,15 +39,48 @@
 					text-decoration: none
 					color: $yellow
 			
-
 .work
-	margin-bottom: 300px		
-	.work-pics
-		height: 700px
+	margin-bottom: 300px	
+	.work-img-wrap
+		position: relative
+		height: 610px
+		overflow: hidden
 		width: 100%
-		background: #333
+		&.loading
+			//background: purple	
+		img
+			margin-right: 20px
+			+box-shadow(1px 2px 5px #333)
+			&:first-child
+				margin-left: 20px
+		iframe
+			float: left
+			margin: 0 20px
+			+box-shadow(1px 2px 5px #333)
 	.work-words
 		margin-top: 30px
+		.work-title
+			text-transform: uppercase
+			font-weight: 700
+		
+.page-user
+	.login
+		margin-top: 15%
+	.description,
+	label
+		display: none
+	.name
+		font-size: 40px
+		line-height: 1
+		font-weight: 700
+		padding-top: 40px
+
+#footer
+	.footer-title
+		font-weight: bold
+		text-transform: uppercase
+		padding: 0 0 20px
+	
 		
 //  Scrolling Areas
 // ----------------------------------------------------------------------------
@@ -53,10 +88,14 @@
 #slideshow 
 	position: relative
 	overflow: hidden
-	margin: 35px 0 0 0
+	height: 600px
+	margin: 0
 	z-index: 50
 	clear: both
-
+	iframe
+		float: left
+		margin-right: 10px
+		
 div.scrollingHotSpotLeft
 	min-width: 75px
 	width: 10%
@@ -84,8 +123,11 @@ div.scrollWrapper
 	
 div.scrollableArea
 	position: relative
-	width: auto
-	height: 100%
+	display: block
+	float: left
+	padding: 0
+	margin: 0
+	
 	
 #slideshow div.scrollableArea img
 	position: relative
