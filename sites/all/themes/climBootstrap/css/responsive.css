@@ -45,7 +45,9 @@
   .work .work-img-wrap { height: 300px !important; }
   .work .work-img-wrap iframe { height: 300px !important; width: 533px !important; }
   .work .work-img-wrap img { height: 300px !important; }
-  #main-nav { display: none; } }
+  #main-nav { display: none; }
+  #intro .name { font-size: 20px; }
+  #intro .welcome { font-size: 14px; padding: 15px 0; } }
 @media (max-width: 767px) { .container { width: auto; padding: 0 20px; }
   .row-fluid { width: 100%; }
   .row { margin-left: 0; }
