@@ -16,7 +16,7 @@
 
 <nav id="main-nav">
 	<ul>
-		<li><a href="#">About</a></li>
+		<li><a href="#">CV</a></li>
 		<li> / </li>
 		<li><a href="mailto:info@patrickmarold.com">Contact</a></li>
 	</ul>
