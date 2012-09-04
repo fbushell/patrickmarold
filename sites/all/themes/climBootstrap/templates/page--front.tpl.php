@@ -53,7 +53,12 @@
 	
 <div class="container" class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <div id="content">
-    <?php print $messages; ?>
+  	<?php
+			global $user;
+			if ($user->uid) {
+			    print $messages;
+			}
+		?>
 </div>
 	
 <footer id="footer" class="container-fluid text-center">
