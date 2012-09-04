@@ -6,13 +6,28 @@
 	// Front page fields
 	$intro = $node->field_intro['und'][0]['value'];
 	$address = $node->field_contact['und'][0]['value'];
-	$about = $node->field_about['und'][0]['value'];
 	$phone = $node->field_phone_number['und'][0]['value'];
+	
+	if ( isset( $node->field_about['und'][0]['value'] )) {
+		
+		$about_body = $node->field_about['und'][0]['value'];
+		$about = "
+			<div class=\"span4\">
+				<div class=\"footer-title\">About</div>
+				<div class=\"footer-body\">$about_body</div>
+			</div>
+		";
+		
+	} else {
+		
+		$about_body = '';
+		$about = '
+			<div class="span4" style="height: 1px;"></div>
+		';
+		
+	}
 
 ?>
-
-
-<div id="top-stripe"></div>
 
 <nav id="main-nav">
 	<ul>
@@ -43,10 +58,7 @@
 	
 <footer id="footer" class="container-fluid text-center">
 	<div class="row-fluid">
-		<div class="span4">
-			<div class="footer-title">About</div>
-			<div class="footer-body"><?php print $about; ?></div>
-		</div>
+		<?php print $about; ?>
 		<div class="span4">
 			<div class="footer-title">Contact</div>
 			<div class="footer-body">

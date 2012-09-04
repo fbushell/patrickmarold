@@ -1,8 +1,6 @@
-<div id="top-stripe"></div>
-	<div class="main-container text-center tk-proxima-nova"> 
-		<div class="name">PATRICK MAROLD</div> 
-		<div class="line"></div> 
-	</div> 
+<div class="main-container text-center tk-proxima-nova"> 
+	<div class="name"><a href="/" >PATRICK MAROLD</a>a></div> 
+	<div class="line"></div> 
 </div>
 
 
