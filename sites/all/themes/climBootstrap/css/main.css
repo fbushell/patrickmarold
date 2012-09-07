@@ -23,7 +23,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .input-block-level { display: block; width: 100%; min-height: 28px; /* Make inputs at least the height of their button counterpart */ /* Makes inputs behave like true block-level elements */ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; }
 
-body { margin: 0; font-family: "proxima-nova", sans-serif; font-style: normal; font-weight: 300; font-size: 14px; line-height: 24px; color: #333333; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #d0cfcb)); background-image: -webkit-linear-gradient(#ffffff, #d0cfcb); background-image: -moz-linear-gradient(#ffffff, #d0cfcb); background-image: -o-linear-gradient(#ffffff, #d0cfcb); background-image: -ms-linear-gradient(#ffffff, #d0cfcb); background-image: linear-gradient(#ffffff, #d0cfcb); }
+body { margin: 0; font-family: "proxima-nova", sans-serif; font-style: normal; font-weight: 300; font-size: 14px; line-height: 24px; color: white; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3f3f3f), color-stop(100%, #000000)); background-image: -webkit-linear-gradient(#3f3f3f, #000000); background-image: -moz-linear-gradient(#3f3f3f, #000000); background-image: -o-linear-gradient(#3f3f3f, #000000); background-image: -ms-linear-gradient(#3f3f3f, #000000); background-image: linear-gradient(#3f3f3f, #000000); }
 
 body.page-user { background: white; border-bottom: none; }
 
@@ -1368,18 +1368,18 @@ span.element-invisible, h2.element-invisible { display: none; }
 
 #intro { margin-top: 13%; margin-bottom: 23%; }
 #intro .welcome { padding: 30px 0; font-size: 16px; line-height: 27px; }
-#intro .name { font-size: 30px; font-weight: 700; letter-spacing: 5px; margin-bottom: 30px; }
+#intro .name { font-size: 30px; font-weight: 300; letter-spacing: 5px; margin-bottom: 30px; }
 
 #main-nav { position: fixed; top: 10px; right: 15px; z-index: 400; font-size: 13px; }
 #main-nav ul li { display: inline; margin-left: 15px; }
-#main-nav ul li a { color: #333333; }
+#main-nav ul li a { color: white; }
 #main-nav ul li a:hover { text-decoration: none; color: #f3734f; }
 
 .work { margin-bottom: 300px; }
 .work .work-img-wrap { position: relative; height: 610px; overflow: hidden; width: 100%; }
-.work .work-img-wrap img { margin-right: 20px; -webkit-box-shadow: 1px 2px 5px #333333; -moz-box-shadow: 1px 2px 5px #333333; box-shadow: 1px 2px 5px #333333; }
+.work .work-img-wrap img { margin-right: 20px; }
 .work .work-img-wrap img:first-child { margin-left: 20px; }
-.work .work-img-wrap iframe { float: left; margin: 0 20px; -webkit-box-shadow: 1px 2px 5px #333333; -moz-box-shadow: 1px 2px 5px #333333; box-shadow: 1px 2px 5px #333333; }
+.work .work-img-wrap iframe { float: left; margin: 0 20px; }
 .work .work-words { margin-top: 30px; }
 .work .work-words .work-title { text-transform: uppercase; font-weight: 700; }
 

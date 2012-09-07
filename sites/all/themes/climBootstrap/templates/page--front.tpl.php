@@ -4,9 +4,24 @@
 	$node = node_load($nid);
 
 	// Front page fields
-	$intro = $node->field_intro['und'][0]['value'];
 	$address = $node->field_contact['und'][0]['value'];
 	$phone = $node->field_phone_number['und'][0]['value'];
+	
+	if ( isset( $node->field_intro['und'][0]['value'] )) {
+	
+		$intro_text = $node->field_intro['und'][0]['value'];
+		$intro = "
+			<div class=\"line\"></div> 
+				<div class=\"welcome\">$intro_text</div> 
+			<div class=\"line\">
+		";
+		
+	} else {
+		
+		$intro = '';
+		
+	}
+	
 	
 	if ( isset( $node->field_about['und'][0]['value'] )) {
 		
@@ -40,11 +55,9 @@
 </nav>
 
 <section id="intro" class="container-fluid center scrollblock">
-	<div class="main-container text-center tk-proxima-nova"> 
+	<div class="main-container text-center"> 
 		<div class="name">PATRICK MAROLD</div> 
-		<div class="line"></div> 
-		<div class="welcome"><?php print $intro; ?></div> 
-		<div class="line">
+		<?php print $intro; ?>
 	</div> 
 </div>
 </section>
