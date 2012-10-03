@@ -1,86 +1,54 @@
-	//jQuery(document).ready(function ($) { 
-	
-	//jQuery(window).load(function ($) { 
-
-	//$(window).load(function(){
-	
-	
-(function($){
-	// Store our function as a property of Drupal.behaviors.
-  Drupal.behaviors.init = {
-    attach: function (context, settings) {  
+;(function( $, window, document, undefined ){
+    
 			$(document).ready(function(){	
 			
-	
-				$("#work2").smoothDivScroll({
-					hotSpotScrollingStep: 5,
-				});
+				// Cache refrence to sliders
+				var $sliders = $("div.work .work-img-wrap");
 					
-				$("#work3").smoothDivScroll({
-					hotSpotScrollingStep: 5,
+				// Loop throught sliders	
+				$sliders.each( function( index ) {
+					
+					// Cache refrence to current slider
+					var $this = $(this);
+					
+					// Init
+					var id = $this.attr("id").replace("work", "");
+					var sliderSelector = "#work" + id;
+					
+					console.log(sliderSelector);
+
+					$(sliderSelector).smoothDivScroll({
+						hotSpotScrollingStep: 5,
+					});
+			
 				});
-				$("#work4").smoothDivScroll({
-					hotSpotScrollingStep: 5,
-				});	
-				$("#work5").smoothDivScroll({
-					hotSpotScrollingStep: 5,
-				});	
-				$("#work6").smoothDivScroll({
-					hotSpotScrollingStep: 5,
-				});	
-				$("#work7").smoothDivScroll({
-					hotSpotScrollingStep: 5,
-				});	
-				$("#work8").smoothDivScroll({
-					hotSpotScrollingStep: 5,
-				});	
-				$("#work9").smoothDivScroll({
-					hotSpotScrollingStep: 5,
-				});	
-				$("#work10").smoothDivScroll({
-					hotSpotScrollingStep: 5,
-				});	
-				$("#work11").smoothDivScroll({
-					hotSpotScrollingStep: 5,
-				});	
-				$("#work12").smoothDivScroll({
-					hotSpotScrollingStep: 5,
-				});	
-				$("#work13").smoothDivScroll({
-					hotSpotScrollingStep: 5,
-				});	
-				$("#work14").smoothDivScroll({
-					hotSpotScrollingStep: 5,
-				});	
-				$("#work15").smoothDivScroll({
-					hotSpotScrollingStep: 5,
-				});	
-				$("#work16").smoothDivScroll({
-					hotSpotScrollingStep: 5,
-				});	
-				$("#work17").smoothDivScroll({
-					hotSpotScrollingStep: 5,
-				});	
-				$("#work18").smoothDivScroll({
-					hotSpotScrollingStep: 5,
-				});	
-				$("#work19").smoothDivScroll({
-					hotSpotScrollingStep: 5,
-				});	
-				$("#work20").smoothDivScroll({
-					hotSpotScrollingStep: 5,
-				});	
+			
+				// Function to determine time and return
+				function DateFinder() {
+				
+					// Init
+				  var now = new Date();
+				  var hour = now.getHours();
 
-
-
-			}); // end window load function
-		}
-  }
-}(jQuery));
-
-
-
-
-
-	//});
-	
+				  // Return day or night  
+		      if (hour < 118) {
+		      
+		        alert ("Good morning in ");
+		        
+		      } else {
+		      
+		        alert ("Good afternoon in ");
+		        
+		      }
+					
+				}
+				
+				
+				console.log( DateFinder());
+				
+		}); // end window load function
+			
+			
+		
+		
+}( jQuery, window, document ));
