@@ -43,16 +43,20 @@
 	}
 
 ?>
-
-<nav id="main-nav">
-	<ul>
-		<!--
-<li><a href="#">CV</a></li>
-		<li> / </li>
--->
-		<li><a href="mailto:info@patrickmarold.com">Contact</a></li>
-	</ul>
-</nav>
+<header>
+	<div id="logo">
+		<div class="name">PATRICK MAROLD</div> 
+	</div>
+	<nav id="main-nav">
+		<ul>
+			<!--
+	<li><a href="#">CV</a></li>
+			<li> / </li>
+	-->
+			<li><a href="mailto:info@patrickmarold.com">Contact</a></li>
+		</ul>
+	</nav>
+</header>
 
 <section id="intro" class="container-fluid center scrollblock">
 	<div class="main-container text-center"> 

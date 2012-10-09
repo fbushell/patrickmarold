@@ -1422,6 +1422,49 @@ div.scrollableArea { position: relative; display: block; float: left; padding: 0
 
 .fixed { position: fixed; }
 
+.flex-container a:active, .flexslider a:active, .flex-container a:focus, .flexslider a:focus { outline: none; }
+
+.slides, .flex-control-nav, .flex-direction-nav { margin: 0; padding: 0; list-style: none; }
+
+.carousel .slides li { opacity: 0.3; filter: alpha(opacity=30); -webkit-transition: 0.3s; -moz-transition: 0.3s; -ms-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; }
+.carousel .slides li.flex-active-slide { opacity: 1; filter: alpha(opacity=100); }
+.carousel .slides li.flex-active-slide:hover { opacity: 1; filter: alpha(opacity=100); }
+.carousel .slides li:hover { opacity: 0.5; filter: alpha(opacity=50); cursor: pointer; }
+
+.flexslider { margin: 0; padding: 0; }
+.flexslider .slides > li { display: none; -webkit-backface-visibility: hidden; }
+
+.flexslider .slides img { width: 100%; display: block; }
+
+.flex-pauseplay span { text-transform: capitalize; }
+
+.slides:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+
+html[xmlns] .slides { display: block; }
+
+* html .slides { height: 1%; }
+
+.no-js .slides > li:first-child { display: block; }
+
+.flexslider { margin: 0 0 5px; background: white; position: relative; zoom: 1; }
+
+.flex-viewport { max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease; }
+
+.loading .flex-viewport { max-height: 300px; }
+
+.flexslider .slides { zoom: 1; }
+
+.carousel li { margin-right: 5px; }
+
+.flex-direction-nav { *height: 0; }
+.flex-direction-nav a { width: 30px; height: 30px; margin: -15px 0 0; display: block; position: absolute; top: 50%; cursor: pointer; text-indent: -9999px; }
+
+.flex-direction-nav .flex-next { background: url(../images/arrow-right.gif) no-repeat center center; right: -40px; }
+
+.flex-direction-nav .flex-prev { background: url(../images/arrow-left.gif) no-repeat center center; left: -40px; }
+
+.flex-direction-nav .flex-disabled { opacity: 0; filter: alpha(opacity=0); cursor: default; }
+
 .clearfix { *zoom: 1; }
 .clearfix:before, .clearfix:after { display: table; content: ""; }
 .clearfix:after { clear: both; }

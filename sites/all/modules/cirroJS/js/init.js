@@ -31,7 +31,7 @@
 				  var hour = now.getHours();
 
 				  // Return day or night  
-		      if (hour < 118) {
+		      if (hour < 18) {
 		      
 		        alert ("Good morning in ");
 		        
