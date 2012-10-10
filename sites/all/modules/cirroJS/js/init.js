@@ -26,24 +26,24 @@
 				// Function to determine time and return
 				function DateFinder() {
 				
-					// Init
-				  var now = new Date();
-				  var hour = now.getHours();
-
-				  // Return day or night  
-		      if (hour < 18) {
-		      
-		        return "morning";
-		        
-		      } else {
-		      
-		        return "night";
-		        
-		      }
-					
-				}
+						// Init
+					  var now = new Date();
+					  var hour = now.getHours();
+	
+					  // Return day or night  
+			      if (hour < 18) {
+			      
+			        return "morning";
+			        
+			      } else {
+			      
+			        return "night";
+			        
+			      }
+						
+					}
 				
-				(function BodyColor() {
+				function BodyColor() {
 					
 					if ( DateFinder() == "morning" ) {
 						
@@ -56,7 +56,9 @@
 					}
 					
 					
-				}());
+				}
+				
+				BodyColor();
 				
 				
 				
