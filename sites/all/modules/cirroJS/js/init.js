@@ -33,18 +33,35 @@
 				  // Return day or night  
 		      if (hour < 18) {
 		      
-		        alert ("Good morning in ");
+		        return "morning";
 		        
 		      } else {
 		      
-		        alert ("Good afternoon in ");
+		        return "night";
 		        
 		      }
 					
 				}
 				
+				(function BodyColor() {
+					
+					if ( DateFinder() == "morning" ) {
+						
+						$("body").css("background", "white");
+						
+					} else {
+						
+						$("body").css("background", "black");
+						
+					}
+					
+					
+				}());
 				
-				console.log( DateFinder());
+				
+				
+				
+				//console.log( DateFinder());
 				
 		}); // end window load function
 			

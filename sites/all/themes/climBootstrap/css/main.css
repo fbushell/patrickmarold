@@ -23,7 +23,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .input-block-level { display: block; width: 100%; min-height: 28px; /* Make inputs at least the height of their button counterpart */ /* Makes inputs behave like true block-level elements */ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; }
 
-body { margin: 0; font-family: "proxima-nova", sans-serif; font-style: normal; font-weight: 300; font-size: 14px; line-height: 24px; color: white; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3f3f3f), color-stop(100%, #000000)); background-image: -webkit-linear-gradient(#3f3f3f, #000000); background-image: -moz-linear-gradient(#3f3f3f, #000000); background-image: -o-linear-gradient(#3f3f3f, #000000); background-image: -ms-linear-gradient(#3f3f3f, #000000); background-image: linear-gradient(#3f3f3f, #000000); }
+body { margin: 0; font-family: "proxima-nova", sans-serif; font-style: normal; font-weight: 300; font-size: 14px; line-height: 24px; color: white; background: yellow; }
 
 body.page-user { background: white; border-bottom: none; }
 
@@ -1363,6 +1363,8 @@ span.element-invisible, h2.element-invisible { display: none; }
 .isotope .isotope-item { -webkit-transition-property: -webkit-transform, opacity; -moz-transition-property: -moz-transform, opacity; -ms-transition-property: -ms-transform, opacity; -o-transition-property: top, left, opacity; transition-property: transform, opacity; }
 
 .isotope.no-transition, .isotope.no-transition .isotope-item, .isotope .isotope-item.no-transition { -webkit-transition-duration: 0s; -moz-transition-duration: 0s; -ms-transition-duration: 0s; -o-transition-duration: 0s; transition-duration: 0s; }
+
+#header { position: fixed; width: 100%; top: 20px; left: 20px; z-index: 500; }
 
 #top-stripe { height: 10px; width: 100%; background-color: #f3734f; position: fixed; top: 0; left: 0; z-index: 300; }
 

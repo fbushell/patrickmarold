@@ -43,7 +43,7 @@
 	}
 
 ?>
-<header>
+<header id="header">
 	<div id="logo">
 		<div class="name">PATRICK MAROLD</div> 
 	</div>
@@ -60,8 +60,7 @@
 
 <section id="intro" class="container-fluid center scrollblock">
 	<div class="main-container text-center"> 
-		<div class="name">PATRICK MAROLD</div> 
-		<?php print $intro; ?>
+		<?php //print $intro; ?>
 	</div> 
 </div>
 </section>
