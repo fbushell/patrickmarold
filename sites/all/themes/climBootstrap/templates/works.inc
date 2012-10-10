@@ -70,7 +70,7 @@
 			  	'alt' => '',
 			  	'title' => '',
 			  	'width' => '',
-			  	'height' => '',
+			  	'height' => '600',
 			  );
 			  
 			  // Theme image
@@ -85,22 +85,26 @@
 
 		}
 
-		$html = "
+		$old = "
 			<section class=\"work\">
-			<div class=\"flexslider\">
-			  <ul class=\"slides\">
-					$imgs_final
-			  </ul>
-			</div>
+				<div class=\"flexslider\">
+				  <ul class=\"slides\">
+						$imgs_final
+				  </ul>
+				</div>
+				<div class=\"work-words container-fluid center\">
+					<div class=\"work-title left\">$work_title&nbsp;&nbsp;/&nbsp;&nbsp;</div>
+					$work_body&nbsp;&nbsp;/&nbsp;&nbsp;$work_date&nbsp;&nbsp;/&nbsp;&nbsp;$work_location
+				</div>
 			</section>
 
 		";
 		
-		$old = "
+		$html = "
 			<section class=\"work\">
 				<div id=\"work$counter\" class=\"work-img-wrap loading\">
 								$video
-								$imgs
+								$imgs_final
 				</div>
 				<div class=\"work-words container-fluid center\">
 					<div class=\"work-title left\">$work_title&nbsp;&nbsp;/&nbsp;&nbsp;</div>
@@ -113,35 +117,6 @@
 		
 	}
 	
-				$test = "
-			<section class=\"work\">
-			<div class=\"flexslider\">
-			  <ul class=\"slides\">
-			    <li>
-			      <img src=\"http://urbantaster.com/wp-content/uploads/2012/10/birdapartment08.jpeg\" />
-			    </li>
-			    <li>
-			      <img src=\"http://urbantaster.com/wp-content/uploads/2012/10/birdapartment07.jpeg\" />
-			    </li>
-			    <li>
-			      <img src=\"http://urbantaster.com/wp-content/uploads/2012/10/birdapartment05.jpeg\" />
-			    </li>
-			     <li>
-			      <img src=\"http://urbantaster.com/wp-content/uploads/2012/10/birdapartment06.jpeg\" />
-			    </li>
-			     <li>
-			      <img src=\"http://urbantaster.com/wp-content/uploads/2012/10/birdapartment03.jpeg\" />
-			    </li>
-			  </ul>
-			</div>
-			</section>
-			";
-
-		
-		
-	print $test;	
-	
-
 
 ?>
 
