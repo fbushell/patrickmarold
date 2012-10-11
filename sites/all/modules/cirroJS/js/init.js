@@ -43,15 +43,16 @@
 						
 					}
 				
+				// Change stylesheet based on day or night
 				function BodyColor() {
 					
 					if ( DateFinder() == "morning" ) {
 						
-						$("body").css("background", "white");
+						$( "link" ).attr( "href", "/sites/all/themes/climBootstrap/css/day.css" ); 
 						
 					} else {
 						
-						$("body").css("background", "black");
+						$( "link" ).attr( "href", "/sites/all/themes/climBootstrap/css/night.css" ); 
 						
 					}
 					
