@@ -47,6 +47,9 @@
 	<div id="logo">
 		<div class="name">PATRICK MAROLD</div> 
 	</div>
+	<div id="switch">
+		+
+	</div>
 	<nav id="main-nav">
 		<ul>
 			<!--
