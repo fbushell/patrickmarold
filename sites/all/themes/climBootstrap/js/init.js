@@ -4,7 +4,8 @@
 		
 		// Init
 		var $switch = $("div.#switch"),
-				$html = $('html');
+				$html = $("html");
+				$icon = $("div.#switch i");
 		
 		
 		// ----------------------------------------------------------
@@ -12,10 +13,16 @@
 		// ----------------------------------------------------------
 		$switch.click(function() {
 		
-			if( $html.hasClass('dark') ) $html.removeClass('dark').addClass('light');
+			if( $html.hasClass('dark') ) {
+					
+					$html.removeClass('dark').addClass('light');
+					$icon.removeClass('icon-white').addClass('icon-black');
 			
-			else $html.removeClass('light').addClass('dark');
-			
+			} else {
+					
+					$html.removeClass('light').addClass('dark');
+					$icon.removeClass('icon-black').addClass('icon-white');
+			}
 		});
 		
 		
@@ -50,10 +57,12 @@
 			if ( DateFinder() == "morning" ) {
 				
 				$html.addClass("light");
+				$icon.addClass("icon-black");
 				
 			} else {
 				
 				$html.addClass('dark'); 
+				$icon.addClass("icon-white");
 				
 			}
 			
@@ -88,10 +97,12 @@
 				var sliderSelector = "#work" + id;
 			
 				$(sliderSelector).smoothDivScroll({
+					visibleHotSpotBackgrounds: "always",
 					hotSpotScrollingStep: 5,
 					touchScrolling: true,
 					autoScrollingMode: "onStart",
 					autoScrollingInterval: 100,
+					manualContinuousScrolling: true
 				});
 				
 			});

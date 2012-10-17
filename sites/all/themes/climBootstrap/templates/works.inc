@@ -94,8 +94,8 @@
 		$html = "
 			<section class=\"work\">
 				<div id=\"work$counter\" class=\"work-img-wrap loading\">
-								$video
-								$imgs_final
+					$imgs_final
+					$video
 				</div>
 				<div class=\"work-words container-fluid\">
 					<div class=\"work-title\">$work_title</div>

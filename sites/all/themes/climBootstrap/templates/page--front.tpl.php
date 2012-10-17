@@ -59,29 +59,29 @@ landl_collections_display();
 	} else {
 		
 		$about_body = '';
-		$about = '
-			<div class="span4" style="height: 1px;"></div>
-		';
+		$about = '';
 		
 	}
 
 ?>
 <header id="header">
-	<div id="logo">
-		<div class="name">PATRICK MAROLD</div> 
+	<div class="header-inner">
+		<div id="logo" class="left">
+			<div class="name">PATRICK MAROLD</div> 
+		</div>
+		<div id="switch" class="right">
+			<i class="icon-adjust icon-white"></i>
+		</div>
+		<nav id="main-nav">
+			<ul>
+				<!--
+		<li><a href="#">CV</a></li>
+				<li> / </li>
+		-->
+				<li><a href="mailto:info@patrickmarold.com">Contact</a></li>
+			</ul>
+		</nav>
 	</div>
-	<div id="switch">
-		+
-	</div>
-	<nav id="main-nav">
-		<ul>
-			<!--
-	<li><a href="#">CV</a></li>
-			<li> / </li>
-	-->
-			<li><a href="mailto:info@patrickmarold.com">Contact</a></li>
-		</ul>
-	</nav>
 </header>
 
 <section id="intro" class="container-fluid center scrollblock">
@@ -93,17 +93,13 @@ landl_collections_display();
 
 <?php include('works.inc'); ?>
 	
-<div class="container" class="<?php print $classes; ?>"<?php print $attributes; ?>>
-  <div id="content">
-  	<?php
-			global $user;
-			if ($user->uid) {
-			    print $messages;
-			}
-		?>
-</div>
+<?php
+	global $user;
+	if ( $user->uid ) { print $messages; }
+?>
+
 	
-<footer id="footer" class="container-fluid text-center">
+<footer id="footer" class="container-fluid">
 	<div class="row-fluid">
 		<?php print $about; ?>
 		<div class="span4">
