@@ -1,5 +1,28 @@
 <?php 
 
+
+function landl_collections_display(){
+
+	// Init 
+	$theme_path = drupal_get_path('theme', 'climBootstrap');
+	$js_path = '';
+	
+	// Add javascript
+	$js_path = "$theme_path/js/jquery-ui-1.8.18.custom.min.js";
+	drupal_add_js($js_path);
+	$js_path = "$theme_path/js/jquery.imagesloaded.min.js";
+	drupal_add_js($js_path);
+	$js_path = "$theme_path/js/jquery.smoothdivscroll-1.2-min.js";
+	drupal_add_js($js_path);
+	$js_path = "$theme_path/js/jquery.mousewheel.min.js";
+	drupal_add_js($js_path);
+	$js_path = "$theme_path/js/init.js";
+	drupal_add_js($js_path, array('scope' => 'footer'));
+	
+}
+
+landl_collections_display();
+
 	$nid = 3;
 	$node = node_load($nid);
 

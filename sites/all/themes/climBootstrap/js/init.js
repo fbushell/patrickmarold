@@ -19,49 +19,58 @@
 		});
 		
 		
-			$( ".work * img" ).imagesLoaded( SliderInit() );
+		// ----------------------------------------------------------
+		// DO YOU HAVE THE TIME?
+		// ----------------------------------------------------------
+		function DateFinder() {
 		
-			// Function to determine time and return
-			function DateFinder() {
-			
-					// Init
-				  var now = new Date();
-				  var hour = now.getHours();
-	
-				  // Return day or night  
-		      if (hour < 18) {
-		      
-		        return "morning";
-		        
-		      } else {
-		      
-		        return "night";
-		        
-		      }
-					
-				}
-			
-			
-			// Change stylesheet based on day or night
-			function BodyColor() {
-				
-				if ( DateFinder() == "morning" ) {
-					
-					$html.addClass("light");
-					
-				} else {
-					
-					$html.addClass('dark'); 
-					
-				}
+				// Init
+			  var now = new Date();
+			  var hour = now.getHours();
+
+			  // Return day or night  
+	      if (hour < 18) {
+	      
+	        return "morning";
+	        
+	      } else {
+	      
+	        return "night";
+	        
+	      }
 				
 			}
 			
-			BodyColor();
+			
+		// ----------------------------------------------------------
+		// NIGHT OR DAY.
+		// ----------------------------------------------------------
+		function BodyColor() {
+			
+			if ( DateFinder() == "morning" ) {
+				
+				$html.addClass("light");
+				
+			} else {
+				
+				$html.addClass('dark'); 
+				
+			}
+			
+		}
+		
+		BodyColor();
 	
 		
-		 // Init all the sliders
-		 function SliderInit() {
+		// ----------------------------------------------------------
+		// SLIDERS.
+		// ----------------------------------------------------------
+		//$( ".work * img" ).imagesLoaded( );
+		$( ".work * img" ).imagesLoaded( SliderInit );
+		
+		function SliderInit() {
+		 
+		 console.log("SliderInit");
 		 
 		 $("div.work-img-wrap").removeClass("loading");
 		 
@@ -88,8 +97,6 @@
 			});
 		
 		}
-		
-		//SliderInit();
 										
 	
 	}); // end window load function
