@@ -1,0 +1,4 @@
+name = Cirro WYSIWYG
+description = The Cirro WYSIWG module utilizes the Redactor.js library to add WYSIWYG to certain form fields in the Cirro framework
+core = 7.x
+package = Cirro

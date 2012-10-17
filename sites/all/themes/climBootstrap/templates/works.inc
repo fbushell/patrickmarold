@@ -35,13 +35,35 @@
 		$imgs = '';
 		$work_nid = $work->nid;
 		$work_title = $work->title;
+		
 		if ( isset( $work->body['und'][0]['value']) ) { 
 			$work_body = $work->body['und'][0]['value'];
 		} else {
 			$work = '';
 		}
+		
+		
+		if ( $work->field_work_date['und'][0]['value'] ) { 
+		
 		$work_date = $work->field_work_date['und'][0]['value'];
+		
+		} else{
+			
+			$work_date ='';
+			
+		}
+		
+		
+		if ( $work->field_work_location['und'][0]['value'] ) {
+		
 		$work_location = $work->field_work_location['und'][0]['value'];
+		
+		} else {
+			
+			$work_location = '';
+			
+		}
+		
 		$img_array = $work->field_work_image['und'];
 		$imgs_final = '';
 		

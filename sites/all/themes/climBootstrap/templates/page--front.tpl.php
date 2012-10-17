@@ -62,6 +62,13 @@ landl_collections_display();
 		$about = '';
 		
 	}
+	
+	// CV section
+	$cv_nid = 5;
+	$cv_node = node_load($cv_nid);
+	
+	$cv_body = $cv_node->body['und'][0]['value'];
+	
 
 ?>
 <header id="header">
@@ -74,10 +81,6 @@ landl_collections_display();
 		</div>
 		<nav id="main-nav">
 			<ul>
-				<!--
-		<li><a href="#">CV</a></li>
-				<li> / </li>
-		-->
 				<li><a href="mailto:info@patrickmarold.com">Contact</a></li>
 			</ul>
 		</nav>
@@ -93,6 +96,14 @@ landl_collections_display();
 
 <?php include('works.inc'); ?>
 	
+<section id="cv" class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+			<?php print $cv_body; ?>
+		</div>
+	</div>
+</section>	
+
 <?php
 	global $user;
 	if ( $user->uid ) { print $messages; }

@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * The Cirro WYSIWYG module
+ */
+
+/**
+ * Implements hook_init
+ */
+function cirro_wysiwyg_init() {
+
+	// Init
+	global $theme;
+	$module_path = drupal_get_path('module', 'cirro_wysiwyg');
+	$js_path = '';
+	$css_path = '';
+
+	// If in the admin theme
+	if ( $theme === 'seven' ) {
+
+		// Add appropriate js to
+		$js_path = "$module_path/js/redactor.min.js";
+		drupal_add_js($js_path, array('weight' => 50));
+		$js_path = "$module_path/js/cirro.wysiwyg.js";
+		drupal_add_js($js_path, array('scope' => 'footer', 'weight' => 20));
+
+		// Add appropriate css to the page
+		$css_path = "$module_path/css/redactor.css";
+		drupal_add_css($css_path);
+
+	}
+
+}

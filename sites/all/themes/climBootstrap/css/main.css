@@ -662,11 +662,13 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini { *padding-top: 1px; *pad
 .table.table-no-bg { background-color: transparent; }
 .table.table-no-bg tr, .table.table-no-bg td { background: none; }
 
-table { max-width: 100%; border-collapse: collapse; border-spacing: 0; background-color: white; }
+table { max-width: 100%; border-collapse: collapse; border-spacing: 0; }
 
 .table { width: 100%; margin-bottom: 18px; }
 
 .table thead th { vertical-align: bottom; }
+
+th, td { vertical-align: top; }
 
 .table th, .table td { padding: 8px; line-height: 18px; text-align: left; vertical-align: top; border-top: 1px solid #cccccc; }
 
@@ -1366,6 +1368,8 @@ span.element-invisible, h2.element-invisible { display: none; }
 
 html.light body { color: black; background: white; }
 html.dark body { color: white; background: black; }
+
+section#cv { padding: 0 55px; }
 
 #header { position: fixed; width: 100%; top: 0; left: 0; padding: 40px 0 30px 0; z-index: 500; }
 #header .header-inner { padding: 0 55px; overflow: hidden; }
