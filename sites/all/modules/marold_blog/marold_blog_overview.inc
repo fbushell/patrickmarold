@@ -4,7 +4,7 @@
 	* 	Blog general overview page callback
 	*/
 
-function landl_blog_overview($blog) {
+function marold_blog_overview($blog) {
 	
 	// Init Vars
 	$posts_string = '';
@@ -16,7 +16,7 @@ function landl_blog_overview($blog) {
 	$blog_header = '';
 	
 	// Include builds blog header section inside of $blog_header
-	include 'landl_blog_header.inc';
+	include 'marold_blog_header.inc';
 	
 	// Add header to markup
 	$html .= $blog_header;

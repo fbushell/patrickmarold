@@ -43,12 +43,14 @@ img
 // -----
 
 a
-	color: $linkColor
+	color: inherit
+	border-bottom: 1px dotted
 	text-decoration: none
 
 a:hover 
-	color: $linkColorHover
-	text-decoration: underline
+	color: inherit
+	border-bottom: 1px dotted $red
+	text-decoration: none
 
 
 // Layouts
@@ -259,7 +261,7 @@ p
 h1, h2, h3, h4, h5, h6
 	margin: 0
 	font-family: $headingsFontFamily
-	font-weight: $headingsFontWeight
+	font-weight: 700
 	color: $headingsColor
 	text-rendering: optimizelegibility
 	// Fix the character spacing for headings

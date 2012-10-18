@@ -3,9 +3,12 @@
 		$(document).ready(function(){	
 		
 		// Init
-		var $switch = $("div.#switch"),
-				$html = $("html");
-				$icon = $("div.#switch i");
+		var $window = $(window),
+				$switch = $("div.#switch"),
+				$html = $("html"),
+				$icon = $("div.#switch i"),
+				$menu = $("#cv-header"),
+				$content = $("#cv-content");
 		
 		
 		// ----------------------------------------------------------
@@ -57,12 +60,12 @@
 			if ( DateFinder() == "morning" ) {
 				
 				$html.addClass("light");
-				$icon.addClass("icon-black");
+				$icon.removeClass('icon-white').addClass('icon-black');
 				
 			} else {
 				
 				$html.addClass('dark'); 
-				$icon.addClass("icon-white");
+				$icon.removeClass('icon-black').addClass('icon-white');
 				
 			}
 			
@@ -108,6 +111,28 @@
 			});
 		
 		}
+		
+		// ----------------------------------------------------------
+		// CAN YOU SAY ACCOR-D-ION.
+		// ----------------------------------------------------------
+		$menu.click(function() {
+		
+			var $this = $(this);
+			
+			if( !$this.hasClass('menu-expanded') ) {
+			
+				$this.addClass('menu-expanded');
+				$content.stop().slideDown(420);
+
+				
+			} else {
+			
+				$this.removeClass('menu-expanded');
+				$content.stop().slideUp(420);
+				
+			}
+			
+		});
 										
 	
 	}); // end window load function

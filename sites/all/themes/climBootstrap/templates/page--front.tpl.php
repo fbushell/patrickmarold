@@ -1,28 +1,29 @@
 <?php 
 
-
-function landl_collections_display(){
-
-	// Init 
-	$theme_path = drupal_get_path('theme', 'climBootstrap');
-	$js_path = '';
+	// Function to add js to page
+	function landl_collections_display(){
 	
-	// Add javascript
-	$js_path = "$theme_path/js/jquery-ui-1.8.18.custom.min.js";
-	drupal_add_js($js_path);
-	$js_path = "$theme_path/js/jquery.imagesloaded.min.js";
-	drupal_add_js($js_path);
-	$js_path = "$theme_path/js/jquery.smoothdivscroll-1.2-min.js";
-	drupal_add_js($js_path);
-	$js_path = "$theme_path/js/jquery.mousewheel.min.js";
-	drupal_add_js($js_path);
-	$js_path = "$theme_path/js/init.js";
-	drupal_add_js($js_path, array('scope' => 'footer'));
+		// Init 
+		$theme_path = drupal_get_path('theme', 'climBootstrap');
+		$js_path = '';
+		
+		// Add javascript
+		$js_path = "$theme_path/js/jquery-ui-1.8.18.custom.min.js";
+		drupal_add_js($js_path);
+		$js_path = "$theme_path/js/jquery.imagesloaded.min.js";
+		drupal_add_js($js_path);
+		$js_path = "$theme_path/js/jquery.smoothdivscroll-1.2-min.js";
+		drupal_add_js($js_path);
+		$js_path = "$theme_path/js/jquery.mousewheel.min.js";
+		drupal_add_js($js_path);
+		$js_path = "$theme_path/js/init.js";
+		drupal_add_js($js_path, array('scope' => 'footer'));
+		
+	}
 	
-}
+	landl_collections_display();
 
-landl_collections_display();
-
+	// Init
 	$nid = 3;
 	$node = node_load($nid);
 
@@ -81,6 +82,7 @@ landl_collections_display();
 		</div>
 		<nav id="main-nav">
 			<ul>
+				<li><?php print l('Blog', 'blog', $options = array()); ?></li>
 				<li><a href="mailto:info@patrickmarold.com">Contact</a></li>
 			</ul>
 		</nav>
@@ -99,7 +101,14 @@ landl_collections_display();
 <section id="cv" class="container-fluid">
 	<div class="row-fluid">
 		<div class="span12">
-			<?php print $cv_body; ?>
+			<div id="cv-header">
+				<div id="cv-title left">CV</div>
+				<div class="plus">+</div>
+				<div class="minus">-</div>
+			</div>
+			<div id="cv-content">
+				<?php print $cv_body; ?>
+			</div>
 		</div>
 	</div>
 </section>	
@@ -113,7 +122,7 @@ landl_collections_display();
 <footer id="footer" class="container-fluid">
 	<div class="row-fluid">
 		<?php print $about; ?>
-		<div class="span4">
+		<div class="span12">
 			<div class="footer-title">Contact</div>
 			<div class="footer-body">
 				Patrick Marold<br>
