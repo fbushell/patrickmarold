@@ -1374,6 +1374,8 @@ html.dark body { color: white; background: black; }
 html.dark body #header .header-inner #logo { background: rgba(0, 0, 0, 0.6); }
 html.dark body div.scrollingHotSpotRight { background: url("../images/white_arrow_right.png") no-repeat 115px center; }
 html.dark body div.scrollingHotSpotLeft { background: url("../images/white_arrow_left.png") no-repeat 20px center; }
+html body.page-blog { background: #eeeeee; }
+html body.page-blog #header .header-inner #logo { background: rgba(238, 238, 238, 0.7); }
 
 section#cv { padding: 0 55px; }
 
@@ -1397,7 +1399,7 @@ section#cv { padding: 0 55px; }
 
 .work { margin-bottom: 200px; }
 .work .work-img-wrap { position: relative; height: 610px; overflow: hidden; padding: 0 55px; }
-.work .work-img-wrap.loading { background: purple; }
+.work .work-img-wrap.loading { background: url("../images/dots.png") scroll; }
 .work .work-img-wrap img { margin-right: 20px; float: left; }
 .work .work-img-wrap iframe { float: left; margin: 0 20px 0 0; }
 .work .work-words { padding: 20px 55px; }
@@ -1432,7 +1434,7 @@ div.scrollingHotSpotRight { min-width: 75px; width: 10%; height: 100%; position:
 
 div.scrollWrapper { position: relative; overflow: hidden; width: 100%; height: 100%; }
 
-div.scrollableArea { position: relative; width: 10000px; display: block; float: left; padding: 0; margin: 0; }
+div.scrollableArea { position: relative; width: 100000px; display: block; float: left; padding: 0; margin: 0; }
 
 #slideshow div.scrollableArea img { position: relative; float: left; margin: 0 5px 0 0; padding: 0; }
 

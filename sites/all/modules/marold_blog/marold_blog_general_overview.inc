@@ -26,9 +26,8 @@ function marold_blog_general_overview($data = NULL){
 		->entityCondition('entity_type', 'node', '=')
 		->propertyCondition('type', 'blog', '=')
 		->propertyOrderBy('created', 'DESC')
-		->pager(2)
 		->execute();
-	
+		
 	// Load blog nodes
 	$blogs = array();
 	
@@ -86,6 +85,7 @@ function marold_blog_general_overview($data = NULL){
 	";
 	
 	}
+	
 	
 	return $html;
 	

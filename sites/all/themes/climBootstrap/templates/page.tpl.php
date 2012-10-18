@@ -3,15 +3,6 @@
 		<div id="logo" class="left">
 			<a href="/"><div class="name">PATRICK MAROLD</div></a>
 		</div>
-		<div id="switch" class="right">
-			<i class="icon-adjust icon-white"></i>
-		</div>
-		<nav id="main-nav">
-			<ul>
-				<li><?php print l('Blog', 'blog', $options = array()); ?></li>
-				<li><a href="mailto:info@patrickmarold.com">Contact</a></li>
-			</ul>
-		</nav>
 	</div>
 </header>
 
