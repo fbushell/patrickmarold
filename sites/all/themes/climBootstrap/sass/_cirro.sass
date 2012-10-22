@@ -3,8 +3,7 @@
 
 html
 	&.light	
-		body
-			color: black
+		body.front
 			background: white
 			#header .header-inner #logo
 				background: rgba(255,255,255,0.6)
@@ -13,7 +12,7 @@ html
 			div.scrollingHotSpotLeft
 				background: url("../images/black_arrow_left.png") no-repeat 20px center
 	&.dark
-		body
+		body.front
 			color: white
 			background: black
 			#header .header-inner #logo
@@ -22,10 +21,10 @@ html
 				background: url("../images/white_arrow_right.png") no-repeat 115px center
 			div.scrollingHotSpotLeft
 				background: url("../images/white_arrow_left.png") no-repeat 20px center
-	body.page-blog
-		background: #eee
+	body
+		+background(linear-gradient(#f6f0e7, #dcdcde))
 		#header .header-inner #logo
-			background: rgba(238, 238, 238, 0.7)
+			background: rgba(246, 240, 231, 0.3)
 			
 
 section
@@ -89,7 +88,7 @@ section
 		margin-bottom: 30px
 			
 .work
-	margin-bottom: 200px	
+	margin-bottom: 200px
 	.work-img-wrap
 		position: relative
 		height: 610px
@@ -123,32 +122,34 @@ section
 		font-weight: 700
 		padding-top: 40px
 
-#cv-header
-	padding: 0 0 5px
-	border-bottom: 1px solid
-	margin-bottom: 20px
-	overflow: hidden
-	font-weight: bold
-	position: relative
-	.minus,
-	.plus
-		position: absolute
-		right: 1px
-		top: 0
-		font-size: 16px
-	.minus
-		+opacity(0)
-	&:hover
-		cursor: pointer
-		border-bottom: 2px solid
-		margin-bottom: 19px
-	&.menu-expanded
+#cv
+	margin-top: -100px
+	#cv-header
+		padding: 0 0 5px
+		border-bottom: 1px solid
+		margin-bottom: 20px
+		overflow: hidden
+		font-weight: bold
+		position: relative
+		.minus,
 		.plus
-			+opacity(0)
+			position: absolute
+			right: 1px
+			top: 0
+			font-size: 16px
 		.minus
-			+opacity(100)
-	#cv-title
-		text-transform: uppercase
+			+opacity(0)
+		&:hover
+			cursor: pointer
+			border-bottom: 2px solid
+			margin-bottom: 19px
+		&.menu-expanded
+			.plus
+				+opacity(0)
+			.minus
+				+opacity(100)
+		#cv-title
+			text-transform: uppercase
 
 #cv-content
 	display: none
@@ -170,6 +171,25 @@ section
 		padding: 0 0 5px
 		border-bottom: 1px solid
 		margin-bottom: 20px
+
+body.page-blog 
+	.blog-post
+		border-bottom: 1px solid
+		padding-bottom: 40px
+		margin-bottom: 40px
+		&:last-child
+			border-bottom: none
+			margin-bottom: 0
+		img
+			margin: 5px 0
+		h4
+			margin-bottom: 15px
+	.pager-last,
+	.pager-first
+		display: none
+	.pager-previous
+		margin-left: 0
+		padding: 0
 	
 		
 //  Scrolling Areas
@@ -289,110 +309,4 @@ div.scrollableArea
 .fixed
 	position: fixed
 
-
-// Flexslider
-//----------------------------------------------
-	
-.flex-container a:active,
-.flexslider a:active,
-.flex-container a:focus,
-.flexslider a:focus
-	outline: none
-	
-.slides,
-.flex-control-nav,
-.flex-direction-nav
-	margin: 0
-	padding: 0
-	list-style: none
-	
-.carousel 
-	.slides li
-		+opacity(30)
-		+transition(0.3s)
-		&.flex-active-slide
-			+opacity(100)
-			&:hover
-				+opacity(100)
-		&:hover
-			+opacity(50)
-			cursor: pointer
-
-.flexslider
-	margin: 0
-	padding: 0
-	.slides > li 
-		display: none 
-		-webkit-backface-visibility: hidden
-			
-
-.flexslider .slides img
-	width: 100%
-	display: block
-	
-.flex-pauseplay span
-	text-transform: capitalize
-
-.slides:after
-	content: "."
-	display: block
-	clear: both
-	visibility: hidden
-	line-height: 0
-	height: 0
-	
-html[xmlns] .slides 
-	display: block
-	
-* html .slides 
-	height: 1%
-
-.no-js .slides > li:first-child 
-	display: block
-
-
-.flexslider
-	margin: 0 0 5px
-	background: #fff
-	position: relative
-	zoom: 1
-	
-.flex-viewport
-	max-height: 2000px
-	-webkit-transition: all 1s ease
-	-moz-transition: all 1s ease
-	transition: all 1s ease
-	
-.loading .flex-viewport 
-	max-height: 300px
-	
-.flexslider .slides 
-	zoom: 1
-
-.carousel li 
-	margin-right: 5px
-
-.flex-direction-nav 
-	*height: 0
-	a 
-		width: 30px
-		height: 30px
-		margin: -15px 0 0
-		display: block
-		position: absolute
-		top: 50%
-		cursor: pointer
-		text-indent: -9999px
-		
-.flex-direction-nav .flex-next 
-	background: url(../images/arrow-right.gif) no-repeat center center
-	right: -40px
-	
-.flex-direction-nav .flex-prev 
-	background: url(../images/arrow-left.gif) no-repeat center center
-	left: -40px
-	
-.flex-direction-nav .flex-disabled 
-	+opacity(0)
-	cursor: default
 

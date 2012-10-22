@@ -15,11 +15,6 @@ function marold_blog_overview($blog) {
 	$html = '';
 	$blog_header = '';
 	
-	// Include builds blog header section inside of $blog_header
-	include 'marold_blog_header.inc';
-	
-	// Add header to markup
-	$html .= $blog_header;
 	
 	// Select proper blog roll based on the $blog parameter
 	$posts_string = "
@@ -72,7 +67,7 @@ function marold_blog_overview($blog) {
 	  // Add blog post output markup
 	  $posts_markup .= "
       <div class=\"blog-post\">
-        <div class=\"title\"><h1>$title</h1></div>
+        <div class=\"title\"><h4>$title</h4></div>
         <div class=\"body\">$body</div>
         <div class=\"blog-images-wrapper\">$image_markup</div>
       </div>

@@ -35,17 +35,22 @@
 		$imgs = '';
 		$work_nid = $work->nid;
 		$work_title = $work->title;
+		$img_array = $work->field_work_image['und'];
+		$imgs_final = '';
 		
 		if ( isset( $work->body['und'][0]['value']) ) { 
+		
 			$work_body = $work->body['und'][0]['value'];
+			
 		} else {
-			$work = '';
+		
+			$work_body= '';
+			
 		}
 		
+		if ( isset($work->field_work_date['und'][0]['value']) ) { 
 		
-		if ( $work->field_work_date['und'][0]['value'] ) { 
-		
-		$work_date = $work->field_work_date['und'][0]['value'];
+			$work_date = $work->field_work_date['und'][0]['value'];
 		
 		} else{
 			
@@ -53,19 +58,15 @@
 			
 		}
 		
+		if ( isset($work->field_work_location['und'][0]['value']) ) {
 		
-		if ( $work->field_work_location['und'][0]['value'] ) {
-		
-		$work_location = $work->field_work_location['und'][0]['value'];
+			$work_location = $work->field_work_location['und'][0]['value'];
 		
 		} else {
 			
 			$work_location = '';
 			
 		}
-		
-		$img_array = $work->field_work_image['und'];
-		$imgs_final = '';
 		
 		if ( isset($work->field_video_link['und'][0]['value']) ) {
 		
@@ -86,6 +87,7 @@
 			
 		}
 		
+		//dsm($img_array);
 		
 		// Loop through all images to get paths
 		foreach ( $img_array as $key => $value ) {
