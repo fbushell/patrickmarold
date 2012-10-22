@@ -90,10 +90,7 @@
 </header>
 
 <section id="intro" class="container-fluid center scrollblock">
-	<div class="main-container text-center"> 
-		<?php //print $intro; ?>
-	</div> 
-</div>
+	<?php //print $intro; ?>
 </section>
 
 <?php include('works.inc'); ?>
