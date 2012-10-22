@@ -1,8 +1,14 @@
 <header id="header">
 	<div class="header-inner">
 		<div id="logo" class="left">
-			<a href="/"><div class="name">PATRICK MAROLD</div></a>
+			<div class="name">PATRICK MAROLD</div> 
 		</div>
+		<nav id="main-nav">
+			<ul>
+				<li><?php print l('Blog', 'blog', $options = array()); ?></li>
+				<li><a href="mailto:info@patrickmarold.com">Contact</a></li>
+			</ul>
+		</nav>
 	</div>
 </header>
 

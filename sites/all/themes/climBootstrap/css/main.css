@@ -1379,8 +1379,8 @@ html.dark body.front { color: white; background: black; }
 html.dark body.front #header .header-inner #logo { background: rgba(0, 0, 0, 0.6); }
 html.dark body.front div.scrollingHotSpotRight { background: url("../images/white_arrow_right.png") no-repeat 80% center; }
 html.dark body.front div.scrollingHotSpotLeft { background: url("../images/white_arrow_left.png") no-repeat 20px center; }
-html body.page-blog { background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f6f0e7), color-stop(100%, #dcdcde)); background: -webkit-linear-gradient(#f6f0e7, #dcdcde); background: -moz-linear-gradient(#f6f0e7, #dcdcde); background: -o-linear-gradient(#f6f0e7, #dcdcde); background: -ms-linear-gradient(#f6f0e7, #dcdcde); background: linear-gradient(#f6f0e7, #dcdcde); }
-html body.page-blog #header .header-inner #logo { background: rgba(246, 240, 231, 0.3); }
+html body.page-blog, html body.node-type-blog { background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f6f0e7), color-stop(100%, #dcdcde)); background: -webkit-linear-gradient(#f6f0e7, #dcdcde); background: -moz-linear-gradient(#f6f0e7, #dcdcde); background: -o-linear-gradient(#f6f0e7, #dcdcde); background: -ms-linear-gradient(#f6f0e7, #dcdcde); background: linear-gradient(#f6f0e7, #dcdcde); }
+html body.page-blog #header .header-inner #logo, html body.node-type-blog #header .header-inner #logo { background: rgba(246, 240, 231, 0.3); }
 
 section#cv { padding: 0 55px; }
 
@@ -1395,6 +1395,7 @@ section#cv { padding: 0 55px; }
 #header .header-inner #main-nav ul li { display: inline; margin-left: 15px; }
 #header .header-inner #main-nav ul li a { border-bottom: none; color: inherit; }
 #header .header-inner #main-nav ul li a:hover { text-decoration: none; }
+#header .header-inner #main-nav ul li a.active { padding-bottom: 5px; border-bottom: 1px dotted; }
 
 #top-stripe { height: 10px; width: 100%; background-color: #f3734f; position: fixed; top: 0; left: 0; z-index: 300; }
 
@@ -1437,6 +1438,10 @@ body.page-blog .blog-post img { margin: 5px 0; }
 body.page-blog .blog-post h4 { margin-bottom: 15px; }
 body.page-blog .pager-last, body.page-blog .pager-first { display: none; }
 body.page-blog .pager-previous { margin-left: 0; padding: 0; }
+
+body.node-type-blog h4 { margin-bottom: 15px; }
+
+#back-blog { margin-top: 15px; }
 
 #slideshow { position: relative; overflow: hidden; height: 600px; margin: 0; z-index: 50; clear: both; }
 #slideshow iframe { float: left; margin-right: 10px; }

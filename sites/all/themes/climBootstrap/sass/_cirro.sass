@@ -21,7 +21,8 @@ html
 				background: url("../images/white_arrow_right.png") no-repeat 80% center
 			div.scrollingHotSpotLeft
 				background: url("../images/white_arrow_left.png") no-repeat 20px center
-	body.page-blog
+	body.page-blog,
+	body.node-type-blog
 		+background(linear-gradient(#f6f0e7, #dcdcde))
 		#header .header-inner #logo
 			background: rgba(246, 240, 231, 0.3)
@@ -64,6 +65,9 @@ section
 						color: inherit
 						&:hover
 							text-decoration: none
+						&.active
+							padding-bottom: 5px
+							border-bottom: 1px dotted
 
 #top-stripe
 	height: 10px
@@ -190,7 +194,12 @@ body.page-blog
 	.pager-previous
 		margin-left: 0
 		padding: 0
+		
+body.node-type-blog h4
+	margin-bottom: 15px
 	
+#back-blog
+	margin-top: 15px
 		
 //  Scrolling Areas
 // ----------------------------------------------------------------------------

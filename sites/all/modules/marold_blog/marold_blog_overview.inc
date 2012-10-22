@@ -6,83 +6,82 @@
 
 function marold_blog_overview($blog) {
 	
-	// Init Vars
-	$posts_string = '';
-	$placeholders = '';
-	$posts_query = '';
-	$posts = '';
-	$posts_markup = '';
+	// Init vars
 	$html = '';
-	$blog_header = '';
+	$posts_string = '';
+	$posts_query = '';
+	$post = '';
+	$blog_roll = '';
+	$main_markup = '';
+	$title = '';
+  $who_posted = '';
+  $body = '';
+  $id = '';
+  $image_objects = '';
+  $blog_type = '';
+  $image_markup = '';
+  $data_attributes = '';
+  $imgs_final = '';
+  $img_styled = '';
+  $date = '';
 	
+	$nid = $node->nid;
+	$post = node_load($nid);
 	
-	// Select proper blog roll based on the $blog parameter
-	$posts_string = "
-	  SELECT id, name, body
-	  FROM cirro_blog
-	    WHERE blog_type = :bt
-	    ORDER BY created DESC
-	    LIMIT 5
-	";
-	
-	// Build placeholders array for query
-	$placeholders = array( 'bt' => $blog );
-	
-	// Pass SELECT statement to db_query with args
-	$posts_query = db_query( $posts_string, $placeholders );
-	
-	// Return first 5 blog posts
-	$posts = $posts_query->fetchAll();
-	
-	// Build blog entries
-	foreach( $posts as $post ) {
-		
-		// Init vars
-		$title = '';
-		$body = '';
-		$image_objects = '';
-		$id = '';
-		$image_markup = '';
-		
-		// Get data
-		$title = $post->name;
-		$body = $post->body;
-		$id = $post->id;
-		$image_objects = cirro_admin_multi_img_load_helper('blog', $id, 'blog_imgs');
-		
-		// Build Images markup
-	  foreach ( $image_objects as $image_object ) {
-		  
-		  // Get url
-		  $url = $image_object->url;
-		  
-		  $image_markup .= "
-		    <div class\"blog-img\">
-		      <img src=\"$url\" />
-		    </div>
-		  ";
-		  
-	  }
+	dsm($post);
+  
+  // Fill vars with DATAAAAA
+  $title = "<h4>{$post->title}</h4>";
+  $body = $post->body['und'][0]['value'];
+  $img_array = $post->field_blog_images['und'];
+  $created = $post->created;
+  $date = date( "F j, Y", $created );
 	  
-	  // Add blog post output markup
-	  $posts_markup .= "
-      <div class=\"blog-post\">
-        <div class=\"title\"><h4>$title</h4></div>
-        <div class=\"body\">$body</div>
-        <div class=\"blog-images-wrapper\">$image_markup</div>
-      </div>
-	  ";
 		
+		// Loop through all images to get paths
+		foreach ( $img_array as $key => $value ) {
+
+			$raw_path = $value['uri'];
+				
+				// Load image vars with image style
+			  $img_vars = array(
+			  	'style_name' => 'blog_images',
+			  	'path' => $raw_path,
+			  	'alt' => '',
+			  	'title' => '',
+			  	'width' => '',
+			  	'height' => '600',
+			  );
+			  
+			  // Theme image
+			  $img_styled =  theme_image_style($img_vars);
+			  
+			  $imgs_final .= "
+			  	$img_styled
+			  ";
+	  
+		  $main_markup .= "
+			  <article class=\"blog-post\">
+			  	$title
+			  	$date
+			  	$body
+			  	$imgs_final
+			  </article>
+		  ";
+	
 	}
 	
-	// Add posts to markup variable
-	$html .= "
+	// Add blog roll to markup variable
+	$html = "
+		<div id=\"back-blog\"><a href=\"/blog\">back to blog</a></div>
 	  <div class=\"posts-container\">
-	    $posts_markup
+	    $main_markup
 	  </div>
+	  $output
 	";
+		
 	
-	
-	return $html;
-	
+
+return $html;
+
 }

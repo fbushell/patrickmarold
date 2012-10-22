@@ -20,6 +20,7 @@ function marold_blog_menu(){
 		'type' => MENU_CALLBACK,
 	);
 	
+/*
 	$items['blog/%'] = array(
 		'title' => t('Blog'),
 		'page callback' => 'marold_blog_overview',
@@ -28,6 +29,7 @@ function marold_blog_menu(){
 		'file' => 'marold_blog_overview.inc',
 		'type' => MENU_CALLBACK,
 	);
+*/
 
 	return $items;
 	
