@@ -1,7 +1,7 @@
 <header id="header">
 	<div class="header-inner">
 		<div id="logo" class="left">
-			<div class="name">PATRICK MAROLD</div> 
+			<div class="name"><a href="/">PATRICK MAROLD</a></div> 
 		</div>
 		<nav id="main-nav">
 			<ul>
