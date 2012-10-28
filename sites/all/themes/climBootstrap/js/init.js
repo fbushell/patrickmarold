@@ -77,15 +77,13 @@
 		// ----------------------------------------------------------
 		// SLIDERS.
 		// ----------------------------------------------------------
-		//$( ".work * img" ).imagesLoaded( );
+		
+		// Desandro image loader with slider init in callback
 		$( ".work * img" ).imagesLoaded( SliderInit );
 		
 		function SliderInit() {
 		 
-		 console.log("SliderInit");
-		 
-		 $("div.work-img-wrap").removeClass("loading");
-		 
+		 //console.log("SliderInit");
 			// Cache refrence to sliders
 			var $sliders = $("div.work-img-wrap");
 				
@@ -105,10 +103,15 @@
 					touchScrolling: true,
 					autoScrollingMode: "onStart",
 					autoScrollingInterval: 100,
-					manualContinuousScrolling: true
+					manualContinuousScrolling: true,
+					setupComplete: function(eventObj, data) {
+						$("div.work-cover").fadeOut();
+					}
 				});
 				
 			});
+			
+			
 		
 		}
 		

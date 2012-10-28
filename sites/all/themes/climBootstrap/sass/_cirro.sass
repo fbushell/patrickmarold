@@ -11,6 +11,8 @@ html
 				background: url("../images/black_arrow_right.png") no-repeat 80% center
 			div.scrollingHotSpotLeft
 				background: url("../images/black_arrow_left.png") no-repeat 20px center
+			.work .work-cover
+				background: url('../images/dots.png') scroll white
 	&.dark
 		body.front
 			color: white
@@ -21,6 +23,8 @@ html
 				background: url("../images/white_arrow_right.png") no-repeat 80% center
 			div.scrollingHotSpotLeft
 				background: url("../images/white_arrow_left.png") no-repeat 20px center
+			.work .work-cover
+				background: url('../images/white_dots.png') scroll
 	body.page-blog,
 	body.node-type-blog
 		+background(linear-gradient(#f6f0e7, #dcdcde))
@@ -49,7 +53,6 @@ section
 		overflow: hidden
 		#logo
 			padding: 10px 10px 10px 0
-			background: rgba(0,0,0,0.6)	
 		#switch
 			padding: 10px 0
 			&:hover
@@ -95,13 +98,19 @@ section
 			
 .work
 	margin-bottom: 200px
+	position: relative
+	.work-cover
+		position: absolute
+		z-index: 10000
+		height: 600px
+		left: 0
+		right: 0
+		+opacity(50)
 	.work-img-wrap
 		position: relative
-		height: 610px
+		height: 600px
 		overflow: hidden
 		padding: 0 55px
-		&.loading
-			background: url('../images/dots.png') scroll
 		img
 			margin-right: 20px
 			float: left

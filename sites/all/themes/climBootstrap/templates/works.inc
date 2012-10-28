@@ -117,7 +117,8 @@
 		
 		$html = "
 			<section class=\"work\">
-				<div id=\"work$counter\" class=\"work-img-wrap loading\">
+				<div class=\"work-cover\"></div>
+				<div id=\"work$counter\" class=\"work-img-wrap\">
 					$imgs_final
 					$video
 				</div>
