@@ -1,0 +1,4 @@
+name = Cirro Ajax
+description = The Cirro AJAX framework built to communicate between JS and PHP
+core = 7.x
+package = Cirro

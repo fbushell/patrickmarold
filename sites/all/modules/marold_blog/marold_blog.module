@@ -1,0 +1,39 @@
+<?php
+/**
+	* @file
+	* 	Blog page load
+	*/
+
+/**
+	*	Implements hook_menu()
+	*/
+function marold_blog_menu(){
+
+	$items = array();
+	
+	// Contact Page
+	$items['blog'] = array(
+		'title' => t('Blog'),
+		'page callback' => 'marold_blog_general_overview',
+		'access arguments' => array('access content'),
+		'file' => 'marold_blog_general_overview.inc',
+		'type' => MENU_CALLBACK,
+	);
+	
+/*
+	$items['blog/%'] = array(
+		'title' => t('Blog'),
+		'page callback' => 'marold_blog_overview',
+		'page arguments' => array(1),
+		'access arguments' => array('access content'),
+		'file' => 'marold_blog_overview.inc',
+		'type' => MENU_CALLBACK,
+	);
+*/
+
+	return $items;
+	
+}
+
+
+

@@ -1,6 +1,79 @@
 //  CIRRO CUSTOM SASS
 // ----------------------------------------------------------------------------
 
+html
+	&.light	
+		body.front
+			background: white
+			#header .header-inner #logo
+				background: rgba(255,255,255,0.6)
+			div.scrollingHotSpotRight
+				background: url("../images/black_arrow_right.png") no-repeat 80% center
+			div.scrollingHotSpotLeft
+				background: url("../images/black_arrow_left.png") no-repeat 20px center
+			.work .work-cover
+				background: url('../images/dots.png') scroll white
+	&.dark
+		body.front
+			color: white
+			background: black
+			#header .header-inner #logo
+				background: rgba(0,0,0,0.6)
+			div.scrollingHotSpotRight
+				background: url("../images/white_arrow_right.png") no-repeat 80% center
+			div.scrollingHotSpotLeft
+				background: url("../images/white_arrow_left.png") no-repeat 20px center
+			.work .work-cover
+				background: url('../images/white_dots.png') scroll
+	body.page-blog,
+	body.node-type-blog
+		+background(linear-gradient(#f6f0e7, #dcdcde))
+		#header .header-inner #logo
+			background: rgba(246, 240, 231, 0.3)
+			a
+				border-bottom: none
+			
+
+section
+	&#cv
+		padding: 0 55px
+		
+#main.container-fluid
+	margin: 100px 55px
+
+#header
+	position: fixed
+	width: 100%
+	top: 0
+	left: 0
+	padding: 30px 0 0
+	z-index: 500
+	.header-inner
+		padding: 0 55px
+		overflow: hidden
+		#logo
+			padding: 10px 10px 10px 0
+		#switch
+			padding: 10px 0
+			&:hover
+				cursor: pointer
+		#main-nav
+			float: right
+			margin-right: 20px
+			padding: 10px 0
+			ul
+				li
+					display: inline
+					margin-left: 15px
+					a
+						border-bottom: none
+						color: inherit
+						&:hover
+							text-decoration: none
+						&.active
+							padding-bottom: 5px
+							border-bottom: 1px dotted
+
 #top-stripe
 	height: 10px
 	width: 100%
@@ -11,54 +84,43 @@
 	z-index: 300
 
 #intro
-	margin-top: 13%
-	margin-bottom: 23%
+	margin-top: 50px
+	margin-bottom: 50px
 	.welcome
 		padding: 30px 0
 		font-size: 16px
 		line-height: 27px
 	.name
 		font-size: 30px
-		font-weight: 700
+		font-weight: 300
 		letter-spacing: 5px
 		margin-bottom: 30px
-		
-#main-nav
-	position: fixed
-	top: 10px
-	right: 15px
-	z-index: 400
-	font-size: 13px
-	ul
-		li
-			display: inline
-			margin-left: 15px
-			a
-				color: #333
-				&:hover
-					text-decoration: none
-					color: $red
 			
 .work
-	margin-bottom: 300px	
+	margin-bottom: 200px
+	position: relative
+	.work-cover
+		position: absolute
+		z-index: 10000
+		height: 600px
+		left: 0
+		right: 0
+		+opacity(50)
 	.work-img-wrap
 		position: relative
-		height: 610px
+		height: 600px
 		overflow: hidden
-		width: 100%
-		&.loading
-			//background: purple	
+		padding: 0 55px
 		img
 			margin-right: 20px
-			+box-shadow(1px 2px 5px #333)
-			&:first-child
-				margin-left: 20px
+			float: left
+			//+box-shadow(1px 2px 5px #333)
 		iframe
 			float: left
-			margin: 0 20px
-			+box-shadow(1px 2px 5px #333)
+			margin: 0 20px 0 0
+			//+box-shadow(1px 2px 5px #333)
 	.work-words
-		margin-top: 30px
+		padding: 20px 55px
 		.work-title
 			text-transform: uppercase
 			font-weight: 700
@@ -75,12 +137,80 @@
 		font-weight: 700
 		padding-top: 40px
 
+#cv
+	margin-top: -100px
+	#cv-header
+		padding: 0 0 5px
+		border-bottom: 1px solid
+		margin-bottom: 20px
+		overflow: hidden
+		font-weight: bold
+		position: relative
+		.minus,
+		.plus
+			position: absolute
+			right: 1px
+			top: 0
+			font-size: 16px
+		.minus
+			+opacity(0)
+		&:hover
+			cursor: pointer
+			border-bottom: 2px solid
+			margin-bottom: 19px
+		&.menu-expanded
+			.plus
+				+opacity(0)
+			.minus
+				+opacity(100)
+		#cv-title
+			text-transform: uppercase
+
+#cv-content
+	display: none
+	table tr td
+		&:first-child
+			padding: 2px 50px 0 0
+			h4
+				font-size: 13px
+				font-weight: 700
+		&:last-child
+			padding-bottom: 15px
+
 #footer
+	padding: 0 55px
+	margin: 50px 0
 	.footer-title
 		font-weight: bold
 		text-transform: uppercase
-		padding: 0 0 20px
+		padding: 0 0 5px
+		border-bottom: 1px solid
+		margin-bottom: 20px
+
+body.page-blog 
+	.blog-post
+		border-bottom: 1px solid
+		padding-bottom: 40px
+		margin-bottom: 40px
+		&:last-child
+			border-bottom: none
+			margin-bottom: 0
+		img
+			margin: 5px 0
+		h4
+			margin-bottom: 15px
+	.pager-last,
+	.pager-first
+		display: none
+	.pager-previous
+		margin-left: 0
+		padding: 0
+		
+body.node-type-blog h4
+	margin-bottom: 15px
 	
+#back-blog
+	margin-top: 15px
 		
 //  Scrolling Areas
 // ----------------------------------------------------------------------------
@@ -104,6 +234,8 @@ div.scrollingHotSpotLeft
 	z-index: 200
 	left: 0
 	cursor: w-resize
+	background: url('../images/white_arrow_left.png') no-repeat 20px center
+	+opacity(100)
 	
 	
 div.scrollingHotSpotRight
@@ -114,6 +246,8 @@ div.scrollingHotSpotRight
 	z-index: 200
 	right: 0
 	cursor: e-resize
+	background: url('../images/white_arrow_right.png') no-repeat 115px center
+	+opacity(100)
 
 div.scrollWrapper
 	position: relative
@@ -123,6 +257,7 @@ div.scrollWrapper
 	
 div.scrollableArea
 	position: relative
+	width: 100000px
 	display: block
 	float: left
 	padding: 0
@@ -193,4 +328,5 @@ div.scrollableArea
 
 .fixed
 	position: fixed
+
 

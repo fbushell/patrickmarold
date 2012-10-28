@@ -7,6 +7,21 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
+  <?php
+		function cirro_core_js_alter(&$javascript) {
+		
+			global $theme;
+			// Conditional so it won't run on admin pages
+			if ($theme !== 'climAdmin'){
+				// Define path to jQuery
+				$jquery_path = '//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js';
+			
+				// Upgrade jQuery
+				$javascript['misc/jquery.js']['data'] = $jquery_path;	
+			
+			}
+		}
+	?>
   <script type="text/javascript" src="//use.typekit.net/ivm5kmw.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   <!-- HTML5 element support for IE6-8 -->
