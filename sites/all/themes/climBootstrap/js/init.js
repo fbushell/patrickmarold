@@ -105,9 +105,11 @@
 					autoScrollingInterval: 100,
 					manualContinuousScrolling: true,
 					setupComplete: function(eventObj, data) {
-						$("div.work-cover").fadeOut();
+						
 					}
 				});
+				
+				$("div.work-cover").fadeOut();
 				
 			});
 			
