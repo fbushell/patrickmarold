@@ -104,9 +104,6 @@
 					autoScrollingMode: "onStart",
 					autoScrollingInterval: 100,
 					manualContinuousScrolling: true,
-					setupComplete: function(eventObj, data) {
-						
-					}
 				});
 				
 				$("div.work-cover").fadeOut();
