@@ -13,8 +13,8 @@
 </header>
 
 <div id="main" class="container-fluid" class="<?php print $classes; ?>"<?php print $attributes; ?>>
-  <div class="row-fluid">
-  	<div id="content-header" class="span8">
+  <div class="row">
+  	<div id="content-header" class="span9">
       <?php print $messages; ?>
     	<?php print render($page['content']) ?>
     </div>

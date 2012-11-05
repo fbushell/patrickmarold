@@ -1,11 +1,15 @@
 <?php
 
-function hook_js_alter(&$javascript) {
-	
-	$jquery_path = '//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js';
+if ( arg(0) === 'blog' ) {
 
-  // Swap out jQuery to use an updated version of the library. 
-  //$javascript['misc/jquery.js']['data'] = drupal_get_path('module', 'update') . $jquery_path;
-  $javascript['misc/jquery.js']['data'] = $jquery_path;
-  
+	function update_js_js_alter(&$javascript) {
+		
+		$jquery_path = '//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js';
+		
+	  // Swap out jQuery to use an updated version of the library. 
+	  $javascript['misc/jquery.js']['data'] = $jquery_path;
+	  //$javascript['misc/jquery.js']['data'] = $jquery_path;
+	  
+	}
+
 }
