@@ -1088,7 +1088,7 @@ section#cv { padding: 0 55px; }
 #footer .footer-title { font-weight: bold; text-transform: uppercase; padding: 0 0 5px; border-bottom: 1px solid; margin-bottom: 20px; }
 
 .node-blog img { width: 100%; }
-.node-blog iframe { width: 100% !important; height: auto !important; }
+.node-blog iframe { width: 100% !important; }
 
 body.page-blog .blog-post { border-bottom: 1px solid; padding-bottom: 40px; margin-bottom: 40px; }
 body.page-blog .blog-post:last-child { border-bottom: none; margin-bottom: 0; }
