@@ -72,10 +72,13 @@ function marold_blog_general_overview($data = NULL){
 	  $imgs_final = '';
 	  $img_styled = '';
 	  $date = '';
+	  $nid = $post->nid;
 	  
 	  // Fill vars with DATAAAAA
-	  $title = "<h4>{$post->title}</h4>";
-	  $body = $post->body['und'][0]['value'];
+	  $title = "<h4><a href=\"/node/{$nid}\">{$post->title}</a></h4>";
+	  if (isset($post->body['und'][0]['value'])) {
+	  	$body = $post->body['und'][0]['value'];
+	  }
 	  if ( isset($post->field_blog_images['und']) ) {
 		  
 		  $img_array = $post->field_blog_images['und'];
@@ -132,7 +135,8 @@ function marold_blog_general_overview($data = NULL){
 		  
 	  }
 	  
-	  $date = date( "F j, Y", $created );
+	  $date_format = date( "F j, Y", $created );
+	  $date = "<div class=\"blog-date\">{$date_format}</div>";
 	  
 	  $main_markup .= "
 				  <article class=\"blog-post\">

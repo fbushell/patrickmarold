@@ -27,9 +27,9 @@ html
 				background: url('../images/white_dots.png') scroll
 	body.page-blog,
 	body.node-type-blog
-		+background(linear-gradient(#f6f0e7, #dcdcde))
+		background: #dcdcde
 		#header .header-inner #logo
-			background: rgba(246, 240, 231, 0.3)
+			background: #dcdcde
 			a
 				border-bottom: none
 			
@@ -199,6 +199,11 @@ body.page-blog
 			margin: 5px 0
 		h4
 			margin-bottom: 15px
+			a:hover
+				border-bottom: 1px solid black
+		.blog-date
+			opacity: 0.3
+			margin-bottom: 20px
 	.pager-last,
 	.pager-first
 		display: none

@@ -27,8 +27,6 @@ function marold_blog_overview($blog) {
 	
 	$nid = $node->nid;
 	$post = node_load($nid);
-	
-	dsm($post);
   
   // Fill vars with DATAAAAA
   $title = "<h4>{$post->title}</h4>";
