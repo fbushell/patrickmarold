@@ -9,6 +9,12 @@
     
     <h4><?php print $title; ?></h4>
     <div class="blog-date"><?php print $date; ?></div>
+
+    <div class="content">
+      <?php print render($content); ?>
+    </div>
+        
+
     <?php  
     
       if ( isset($node->field_blog_video_link['und'][0]['value']) ) {
@@ -28,10 +34,6 @@
 
     <?php print $video; ?>
 
-  	<div class="content">
-  	  <?php print render($content); ?>
-  	</div>
-        
     <div id="back-blog"><a href="/blog">back to blog</a></div>
     
 	</div> <!-- /node-inner -->
